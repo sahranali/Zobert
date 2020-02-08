@@ -109,8 +109,8 @@ args = parser.parse_args()
 
 vocab = Vocabulary()
 
-if args.zobert.txt:
-  vocab.load(args.zobert.txt)
+if args.input_json:
+  vocab.load(args.input_json)
 
 def tts(*args):
   return b''.join(args).decode(errors='backslashreplace')
